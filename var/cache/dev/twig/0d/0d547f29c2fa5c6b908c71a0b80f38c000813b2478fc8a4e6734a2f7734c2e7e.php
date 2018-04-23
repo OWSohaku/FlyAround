@@ -478,6 +478,6 @@ class __TwigTemplate_3a5d5cc5cc255fc63f58ece7566e15bb5b56064a5c13531122209e50991
         {% endif %}
     </div>
 </div>
-", "@Twig/Exception/exception.html.twig", "/home/wilder/WCS/Quête/FlyAround/Symfony/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/exception.html.twig");
+", "@Twig/Exception/exception.html.twig", "/home/wilder/WCS/Quête/FlyAround/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/exception.html.twig");
     }
 }

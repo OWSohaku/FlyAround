@@ -827,6 +827,6 @@ class __TwigTemplate_5320d692db4e2bc2f353b0385a8ed10763bfa1aa0642e5b7a0b1cf008e2
         {% endif %}
     {% endfor %}
 {% endblock %}
-", "@Swiftmailer/Collector/swiftmailer.html.twig", "/home/wilder/WCS/Quête/FlyAround/Symfony/vendor/symfony/swiftmailer-bundle/Resources/views/Collector/swiftmailer.html.twig");
+", "@Swiftmailer/Collector/swiftmailer.html.twig", "/home/wilder/WCS/Quête/FlyAround/vendor/symfony/swiftmailer-bundle/Resources/views/Collector/swiftmailer.html.twig");
     }
 }

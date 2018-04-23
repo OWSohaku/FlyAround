@@ -31,10 +31,12 @@ class Reservation
     private $passenger;
 
     /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", inversedBy="flights")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Flight", inversedBy="flights")
      * @ORM\JoinColumn(nullable=false)
      */
     private $flight;
+
+
 
     /**
      * @var int
@@ -147,5 +149,53 @@ class Reservation
     public function getWasDone()
     {
         return $this->wasDone;
+    }
+
+    /**
+     * Set passenger
+     *
+     * @param \AppBundle\Entity\User $passenger
+     *
+     * @return Reservation
+     */
+    public function setPassenger(\AppBundle\Entity\User $passenger)
+    {
+        $this->passenger = $passenger;
+
+        return $this;
+    }
+
+    /**
+     * Get passenger
+     *
+     * @return \AppBundle\Entity\User
+     */
+    public function getPassenger()
+    {
+        return $this->passenger;
+    }
+
+    /**
+     * Set flight
+     *
+     * @param \AppBundle\Entity\User $flight
+     *
+     * @return Reservation
+     */
+    public function setFlight(\AppBundle\Entity\User $flight)
+    {
+        $this->flight = $flight;
+
+        return $this;
+    }
+
+    /**
+     * Get flight
+     *
+     * @return \AppBundle\Entity\User
+     */
+    public function getFlight()
+    {
+        return $this->flight;
     }
 }

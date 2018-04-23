@@ -12,6 +12,28 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Reservation
 {
+    /*
+     * Adding personal methods / variables
+     */
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", inversedBy="passengers")
+     */
+    private $passenger;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", inversedBy="flights")
+     */
+    private $flight;
+
     /**
      * @var int
      *
@@ -124,5 +146,52 @@ class Reservation
     {
         return $this->wasDone;
     }
-}
 
+    /**
+     * Set passenger
+     *
+     * @param \AppBundle\Entity\User $passenger
+     *
+     * @return Reservation
+     */
+    public function setPassenger(\AppBundle\Entity\User $passenger)
+    {
+        $this->passenger = $passenger;
+
+        return $this;
+    }
+
+    /**
+     * Get passenger
+     *
+     * @return \AppBundle\Entity\User
+     */
+    public function getPassenger()
+    {
+        return $this->passenger;
+    }
+
+    /**
+     * Set flight
+     *
+     * @param \AppBundle\Entity\User $flight
+     *
+     * @return Reservation
+     */
+    public function setFlight(\AppBundle\Entity\User $flight)
+    {
+        $this->flight = $flight;
+
+        return $this;
+    }
+
+    /**
+     * Get flight
+     *
+     * @return \AppBundle\Entity\User
+     */
+    public function getFlight()
+    {
+        return $this->flight;
+    }
+}

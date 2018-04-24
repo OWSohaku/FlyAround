@@ -1,5 +1,6 @@
 /vendor/
 .idea
+/app/config/parameters.yml
 Supprimerait var/cache/dev/pools/30NlbUHDPZ/
 Supprimerait var/cache/dev/pools/8gNGcUe0EG/
 Supprimerait var/cache/dev/pools/AmsnJyFltq/

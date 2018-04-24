@@ -171,6 +171,6 @@ class __TwigTemplate_f464c946f2c0e887c238c720291a61927df020f1f0ed16d3a3cd646e0c0
         </div>
     </div>
 </div>
-", "@Twig/Exception/traces.html.twig", "/home/wilder/WCS/Quête/FlyAround/Symfony/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/traces.html.twig");
+", "@Twig/Exception/traces.html.twig", "/home/wilder/WCS/Quête/FlyAround/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/traces.html.twig");
     }
 }

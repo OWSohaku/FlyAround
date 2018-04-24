@@ -10,6 +10,8 @@
                 <th>Nbreservedseats</th>
                 <th>Publicationdate</th>
                 <th>Wasdone</th>
+                <th>Passenger</th>
+                <th>Flight</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -20,6 +22,8 @@
                 <td>{{ reservation.nbReservedSeats }}</td>
                 <td>{% if reservation.publicationDate %}{{ reservation.publicationDate|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>{% if reservation.wasDone %}Yes{% else %}No{% endif %}</td>
+                <td>{{ reservation.passenger }} </td>
+                <td>{{ reservation.flight }} </td>
                 <td>
                     <ul>
                         <li>

@@ -55,52 +55,62 @@ class __TwigTemplate_2cd51c6dfdbc563125c0aa32180c02d0e6dbf8ceee3d913b1babf46ab2f
                 <th>Nbreservedseats</th>
                 <th>Publicationdate</th>
                 <th>Wasdone</th>
+                <th>Passenger</th>
+                <th>Flight</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         ";
-        // line 17
+        // line 19
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["reservations"] ?? $this->getContext($context, "reservations")));
         foreach ($context['_seq'] as $context["_key"] => $context["reservation"]) {
-            // line 18
+            // line 20
             echo "            <tr>
                 <td><a href=\"";
-            // line 19
+            // line 21
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("reservation_show", array("id" => $this->getAttribute($context["reservation"], "id", array()))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["reservation"], "id", array()), "html", null, true);
             echo "</a></td>
                 <td>";
-            // line 20
+            // line 22
             echo twig_escape_filter($this->env, $this->getAttribute($context["reservation"], "nbReservedSeats", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 21
+            // line 23
             if ($this->getAttribute($context["reservation"], "publicationDate", array())) {
                 echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["reservation"], "publicationDate", array()), "Y-m-d H:i:s"), "html", null, true);
             }
             echo "</td>
                 <td>";
-            // line 22
+            // line 24
             if ($this->getAttribute($context["reservation"], "wasDone", array())) {
                 echo "Yes";
             } else {
                 echo "No";
             }
             echo "</td>
+                <td>";
+            // line 25
+            echo twig_escape_filter($this->env, $this->getAttribute($context["reservation"], "passenger", array()), "html", null, true);
+            echo " </td>
+                <td>";
+            // line 26
+            echo twig_escape_filter($this->env, $this->getAttribute($context["reservation"], "flight", array()), "html", null, true);
+            echo " </td>
                 <td>
                     <ul>
                         <li>
                             <a href=\"";
-            // line 26
+            // line 30
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("reservation_show", array("id" => $this->getAttribute($context["reservation"], "id", array()))), "html", null, true);
             echo "\">show</a>
                         </li>
                         <li>
                             <a href=\"";
-            // line 29
+            // line 33
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("reservation_edit", array("id" => $this->getAttribute($context["reservation"], "id", array()))), "html", null, true);
             echo "\">edit</a>
                         </li>
@@ -112,14 +122,14 @@ class __TwigTemplate_2cd51c6dfdbc563125c0aa32180c02d0e6dbf8ceee3d913b1babf46ab2f
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['reservation'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 35
+        // line 39
         echo "        </tbody>
     </table>
 
     <ul>
         <li>
             <a href=\"";
-        // line 40
+        // line 44
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("reservation_new");
         echo "\">Create a new reservation</a>
         </li>
@@ -145,7 +155,7 @@ class __TwigTemplate_2cd51c6dfdbc563125c0aa32180c02d0e6dbf8ceee3d913b1babf46ab2f
 
     public function getDebugInfo()
     {
-        return array (  123 => 40,  116 => 35,  104 => 29,  98 => 26,  87 => 22,  81 => 21,  77 => 20,  71 => 19,  68 => 18,  64 => 17,  49 => 4,  40 => 3,  11 => 1,);
+        return array (  133 => 44,  126 => 39,  114 => 33,  108 => 30,  101 => 26,  97 => 25,  89 => 24,  83 => 23,  79 => 22,  73 => 21,  70 => 20,  66 => 19,  49 => 4,  40 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -170,6 +180,8 @@ class __TwigTemplate_2cd51c6dfdbc563125c0aa32180c02d0e6dbf8ceee3d913b1babf46ab2f
                 <th>Nbreservedseats</th>
                 <th>Publicationdate</th>
                 <th>Wasdone</th>
+                <th>Passenger</th>
+                <th>Flight</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -180,6 +192,8 @@ class __TwigTemplate_2cd51c6dfdbc563125c0aa32180c02d0e6dbf8ceee3d913b1babf46ab2f
                 <td>{{ reservation.nbReservedSeats }}</td>
                 <td>{% if reservation.publicationDate %}{{ reservation.publicationDate|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>{% if reservation.wasDone %}Yes{% else %}No{% endif %}</td>
+                <td>{{ reservation.passenger }} </td>
+                <td>{{ reservation.flight }} </td>
                 <td>
                     <ul>
                         <li>
@@ -201,6 +215,6 @@ class __TwigTemplate_2cd51c6dfdbc563125c0aa32180c02d0e6dbf8ceee3d913b1babf46ab2f
         </li>
     </ul>
 {% endblock %}
-", "reservation/index.html.twig", "/home/wilder/WCS/Quête/FlyAround/Symfony/app/Resources/views/reservation/index.html.twig");
+", "reservation/index.html.twig", "/home/wilder/WCS/Quête/FlyAround/app/Resources/views/reservation/index.html.twig");
     }
 }

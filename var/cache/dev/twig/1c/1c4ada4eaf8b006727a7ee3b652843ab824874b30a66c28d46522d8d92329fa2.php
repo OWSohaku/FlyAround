@@ -178,6 +178,6 @@ class __TwigTemplate_ca0706c25efd71d42317e6d52c7777f6116231c1c80ed70ff32d0816548
     {% endfor %}
     </tbody>
 </table>
-", "@Twig/Exception/logs.html.twig", "/home/wilder/WCS/Quête/FlyAround/Symfony/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/logs.html.twig");
+", "@Twig/Exception/logs.html.twig", "/home/wilder/WCS/Quête/FlyAround/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/logs.html.twig");
     }
 }

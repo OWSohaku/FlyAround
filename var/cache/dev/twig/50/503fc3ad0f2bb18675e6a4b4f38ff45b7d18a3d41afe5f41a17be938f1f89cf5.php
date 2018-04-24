@@ -84,30 +84,44 @@ class __TwigTemplate_068caf4f4f29369c9ac3d9886ee8bb8dca072caea702606e85fc80c0941
         }
         echo "</td>
             </tr>
+            <tr>
+                <th>Passenger</th>
+                <td>";
+        // line 26
+        echo twig_escape_filter($this->env, $this->getAttribute(($context["reservation"] ?? $this->getContext($context, "reservation")), "passenger", array()), "html", null, true);
+        echo " </td>
+            </tr>
+            <tr>
+                <th>Flight</th>
+                <td>";
+        // line 30
+        echo twig_escape_filter($this->env, $this->getAttribute(($context["reservation"] ?? $this->getContext($context, "reservation")), "flight", array()), "html", null, true);
+        echo "</td>
+            </tr>
         </tbody>
     </table>
 
     <ul>
         <li>
             <a href=\"";
-        // line 29
+        // line 37
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("reservation_index");
         echo "\">Back to the list</a>
         </li>
         <li>
             <a href=\"";
-        // line 32
+        // line 40
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("reservation_edit", array("id" => $this->getAttribute(($context["reservation"] ?? $this->getContext($context, "reservation")), "id", array()))), "html", null, true);
         echo "\">Edit</a>
         </li>
         <li>
             ";
-        // line 35
+        // line 43
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock(($context["delete_form"] ?? $this->getContext($context, "delete_form")), 'form_start');
         echo "
                 <input type=\"submit\" value=\"Delete\">
             ";
-        // line 37
+        // line 45
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock(($context["delete_form"] ?? $this->getContext($context, "delete_form")), 'form_end');
         echo "
         </li>
@@ -133,7 +147,7 @@ class __TwigTemplate_068caf4f4f29369c9ac3d9886ee8bb8dca072caea702606e85fc80c0941
 
     public function getDebugInfo()
     {
-        return array (  111 => 37,  106 => 35,  100 => 32,  94 => 29,  80 => 22,  71 => 18,  64 => 14,  57 => 10,  49 => 4,  40 => 3,  11 => 1,);
+        return array (  125 => 45,  120 => 43,  114 => 40,  108 => 37,  98 => 30,  91 => 26,  80 => 22,  71 => 18,  64 => 14,  57 => 10,  49 => 4,  40 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -168,6 +182,14 @@ class __TwigTemplate_068caf4f4f29369c9ac3d9886ee8bb8dca072caea702606e85fc80c0941
             <tr>
                 <th>Wasdone</th>
                 <td>{% if reservation.wasDone %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Passenger</th>
+                <td>{{  reservation.passenger }} </td>
+            </tr>
+            <tr>
+                <th>Flight</th>
+                <td>{{ reservation.flight  }}</td>
             </tr>
         </tbody>
     </table>

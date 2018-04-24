@@ -27,6 +27,7 @@ class Reservation
     /**
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", inversedBy="passengers")
      * @ORM\JoinColumn(nullable=false)
+     *
      */
     private $passenger;
 
@@ -67,7 +68,6 @@ class Reservation
      * @ORM\Column(name="wasDone", type="boolean")
      */
     private $wasDone;
-
 
     /**
      * Get id
@@ -178,11 +178,11 @@ class Reservation
     /**
      * Set flight
      *
-     * @param \AppBundle\Entity\User $flight
+     * @param \AppBundle\Entity\Flight $flight
      *
      * @return Reservation
      */
-    public function setFlight(\AppBundle\Entity\User $flight)
+    public function setFlight(\AppBundle\Entity\Flight $flight)
     {
         $this->flight = $flight;
 
@@ -192,7 +192,7 @@ class Reservation
     /**
      * Get flight
      *
-     * @return \AppBundle\Entity\User
+     * @return \AppBundle\Entity\Flight
      */
     public function getFlight()
     {

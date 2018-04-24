@@ -92,17 +92,25 @@ class __TwigTemplate_2cd51c6dfdbc563125c0aa32180c02d0e6dbf8ceee3d913b1babf46ab2f
                 echo "No";
             }
             echo "</td>
+                <td>";
+            // line 25
+            echo twig_escape_filter($this->env, $this->getAttribute($context["reservation"], "passenger", array()), "html", null, true);
+            echo " </td>
+                <td>";
+            // line 26
+            echo twig_escape_filter($this->env, $this->getAttribute($context["reservation"], "flight", array()), "html", null, true);
+            echo " </td>
                 <td>
                     <ul>
                         <li>
                             <a href=\"";
-            // line 28
+            // line 30
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("reservation_show", array("id" => $this->getAttribute($context["reservation"], "id", array()))), "html", null, true);
             echo "\">show</a>
                         </li>
                         <li>
                             <a href=\"";
-            // line 31
+            // line 33
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("reservation_edit", array("id" => $this->getAttribute($context["reservation"], "id", array()))), "html", null, true);
             echo "\">edit</a>
                         </li>
@@ -114,14 +122,14 @@ class __TwigTemplate_2cd51c6dfdbc563125c0aa32180c02d0e6dbf8ceee3d913b1babf46ab2f
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['reservation'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 37
+        // line 39
         echo "        </tbody>
     </table>
 
     <ul>
         <li>
             <a href=\"";
-        // line 42
+        // line 44
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("reservation_new");
         echo "\">Create a new reservation</a>
         </li>
@@ -147,7 +155,7 @@ class __TwigTemplate_2cd51c6dfdbc563125c0aa32180c02d0e6dbf8ceee3d913b1babf46ab2f
 
     public function getDebugInfo()
     {
-        return array (  125 => 42,  118 => 37,  106 => 31,  100 => 28,  89 => 24,  83 => 23,  79 => 22,  73 => 21,  70 => 20,  66 => 19,  49 => 4,  40 => 3,  11 => 1,);
+        return array (  133 => 44,  126 => 39,  114 => 33,  108 => 30,  101 => 26,  97 => 25,  89 => 24,  83 => 23,  79 => 22,  73 => 21,  70 => 20,  66 => 19,  49 => 4,  40 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -184,6 +192,8 @@ class __TwigTemplate_2cd51c6dfdbc563125c0aa32180c02d0e6dbf8ceee3d913b1babf46ab2f
                 <td>{{ reservation.nbReservedSeats }}</td>
                 <td>{% if reservation.publicationDate %}{{ reservation.publicationDate|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>{% if reservation.wasDone %}Yes{% else %}No{% endif %}</td>
+                <td>{{ reservation.passenger }} </td>
+                <td>{{ reservation.flight }} </td>
                 <td>
                     <ul>
                         <li>

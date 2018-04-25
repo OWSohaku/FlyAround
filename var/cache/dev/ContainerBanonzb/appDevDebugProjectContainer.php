@@ -1,6 +1,6 @@
 <?php
 
-namespace ContainerRco1cgo;
+namespace ContainerBanonzb;
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -40,6 +40,7 @@ class appDevDebugProjectContainer extends Container
             'appbundle\\controller\\listingcontroller' => 'AppBundle\\Controller\\ListingController',
             'appbundle\\controller\\planemodelcontroller' => 'AppBundle\\Controller\\PlaneModelController',
             'appbundle\\controller\\reservationcontroller' => 'AppBundle\\Controller\\ReservationController',
+            'appbundle\\controller\\reviewcontroller' => 'AppBundle\\Controller\\ReviewController',
             'appbundle\\controller\\sitecontroller' => 'AppBundle\\Controller\\SiteController',
             'appbundle\\controller\\usercontroller' => 'AppBundle\\Controller\\UserController',
             'appbundle\\form\\flighttype' => 'AppBundle\\Form\\FlightType',
@@ -140,6 +141,7 @@ class appDevDebugProjectContainer extends Container
             'AppBundle\\Controller\\ListingController' => 'getListingControllerService.php',
             'AppBundle\\Controller\\PlaneModelController' => 'getPlaneModelControllerService.php',
             'AppBundle\\Controller\\ReservationController' => 'getReservationControllerService.php',
+            'AppBundle\\Controller\\ReviewController' => 'getReviewControllerService.php',
             'AppBundle\\Controller\\SiteController' => 'getSiteControllerService.php',
             'AppBundle\\Controller\\UserController' => 'getUserControllerService.php',
             'AppBundle\\Form\\FlightType' => 'getFlightTypeService.php',

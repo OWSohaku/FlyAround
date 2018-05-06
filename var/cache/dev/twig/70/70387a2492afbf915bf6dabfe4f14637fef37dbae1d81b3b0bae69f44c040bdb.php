@@ -75,6 +75,13 @@ class __TwigTemplate_27153992e2224efaf1fa3012d5d6df1177990fa9830c6e03345ae0db708
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("site_index");
         echo "\">Voir les terrains</a>
                 </li>
+                <li>
+                    <a href=\"";
+        // line 21
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("review_index");
+        echo "\">Voir tous les avis utilisateurs</a>
+                </li>
+
             </ul>
         </div>
     </div>
@@ -87,7 +94,7 @@ class __TwigTemplate_27153992e2224efaf1fa3012d5d6df1177990fa9830c6e03345ae0db708
 
     }
 
-    // line 25
+    // line 29
     public function block_stylesheets($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -96,7 +103,7 @@ class __TwigTemplate_27153992e2224efaf1fa3012d5d6df1177990fa9830c6e03345ae0db708
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 26
+        // line 30
         echo "<style>
     body { background: #F5F5F5; font: 18px/1.5 sans-serif; }
     h1, h2 { line-height: 1.2; margin: 0 0 .5em; }
@@ -144,7 +151,7 @@ class __TwigTemplate_27153992e2224efaf1fa3012d5d6df1177990fa9830c6e03345ae0db708
 
     public function getDebugInfo()
     {
-        return array (  100 => 26,  91 => 25,  75 => 18,  69 => 15,  63 => 12,  57 => 9,  50 => 4,  41 => 3,  11 => 1,);
+        return array (  107 => 30,  98 => 29,  81 => 21,  75 => 18,  69 => 15,  63 => 12,  57 => 9,  50 => 4,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -176,6 +183,10 @@ class __TwigTemplate_27153992e2224efaf1fa3012d5d6df1177990fa9830c6e03345ae0db708
                 <li>
                     <a href=\"{{ path('site_index') }}\">Voir les terrains</a>
                 </li>
+                <li>
+                    <a href=\"{{ path('review_index') }}\">Voir tous les avis utilisateurs</a>
+                </li>
+
             </ul>
         </div>
     </div>

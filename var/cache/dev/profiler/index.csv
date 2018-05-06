@@ -115,3 +115,6 @@ a13557,127.0.0.1,GET,http://localhost:8000/,1524656142,,200
 af2e76,127.0.0.1,GET,http://localhost:8000/revie,1524656180,d5c2dc,200
 d5c2dc,127.0.0.1,GET,http://localhost:8000/revie,1524656180,,404
 65c9d3,127.0.0.1,GET,http://localhost:8000/review/,1524656181,,200
+ade786,127.0.0.1,GET,http://localhost:8000/,1525192247,,200
+ebcb87,127.0.0.1,GET,http://localhost:8000/,1525192320,,200
+db6bcc,127.0.0.1,GET,http://localhost:8000/review/,1525192323,,200
